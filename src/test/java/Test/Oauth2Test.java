@@ -1,4 +1,4 @@
-package Demo;
+package Test;
 	import static io.restassured.RestAssured.given;
 
 	import java.util.ArrayList;
@@ -22,7 +22,7 @@ import io.restassured.RestAssured;
 	import io.restassured.response.ResponseBody;
 
 
-	public class Oauth1{
+	public class Oauth2Test{
 
 
 

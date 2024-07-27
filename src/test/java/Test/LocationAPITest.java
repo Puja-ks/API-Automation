@@ -1,4 +1,4 @@
-package Demo;
+package Test;
 import Pojo.AddPlace;
 import Pojo.Location;
 import static io.restassured.RestAssured.given;
@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 import java.util.*;
 
 
-public class GoogleAPIAUtomation {
+public class LocationAPITest {
 	
 	public static void main(String[] args) {
 	AddPlace p = new AddPlace();
@@ -24,13 +24,14 @@ public class GoogleAPIAUtomation {
 	p.setTypes(myList);
 	
 	
+	
 	Location l =new Location();
 	l.setLat(-38.383494);
 	l.setLng(33.427362);
 
 	p.setLocation(l);
 	
-	Response res=given().log().all().queryParam("key", "qaclick123")
+	Response res = given().log().all().queryParam("key", "qaclick123")
 	.body(p)
 	.when().post("/maps/api/place/add/json").
 	then().assertThat().statusCode(200).extract().response();
