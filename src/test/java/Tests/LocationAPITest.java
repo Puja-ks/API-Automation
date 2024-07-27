@@ -1,4 +1,4 @@
-package Test;
+package Tests;
 import Pojo.AddPlace;
 import Pojo.Location;
 import static io.restassured.RestAssured.given;
@@ -15,7 +15,7 @@ public class LocationAPITest {
 	p.setAddresss("67, prithvi layout,  99");
 	p.setLanguage("French-IN");
 	p.setPhone_numbe("(+91) 983 703 3937");
-	p.setWebsite("https://rahulshettyacademy.com");
+	p.setWebsite("https://www.site24x7.com");
 	p.setName("1st cross house");
 	
 	List<String> myList =new ArrayList<String>();
